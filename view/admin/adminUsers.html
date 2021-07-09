@@ -1,0 +1,93 @@
+<script src="../../js/admin/user.js"></script>
+
+
+<div class="container">
+
+    <br>
+<h2>Usuarios</h2>
+<br>
+
+    <div id="toolbarUsers">
+        <button id="createUserButton" class="btn btn-primary">
+            <i class="fa fa-user-plus"></i>
+        </button>
+        <button id="editUser" class="btn" disabled>
+            <i class="fa fa-edit"></i>
+        </button>
+        <button id="deleteUser" class="btn" disabled>
+            <i class="fa fa-trash"></i>
+        </button>
+    </div>
+
+    <table id="usersTable" data-toolbar="#toolbarUsers" data-search="true" data-response-handler="dataHandler"
+        data-show-refresh="false" data-show-toggle="false" data-show-columns="false" data-show-export="false"
+        data-detail-view="false" data-detail-formatter="false" data-minimum-count-columns="2"
+        data-show-pagination-switch="false" data-pagination="true" data-page-list="[ 50, 100, ALL]"
+        data-show-footer="false" class="adminTables">
+
+        <thead class="table-header">
+            <tr>
+                <th data-checkbox="true" data-align="center" data-valign="middle"></th>
+                <th class="textTag" data-field="name" data-align="left" data-visible="true" data-valign="middle"
+                    data-sortable="true">Nombre</th>
+                <th class="textTag" data-field="email" data-align="left" data-visible="true" data-valign="middle"
+                    data-sortable="true">Email</th>
+            </tr>
+        </thead>
+    </table>
+
+</div>
+
+
+<div id="userCreation" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label">Nombre<sup>*</sup></label>
+                    <input type="text" name="name" id="name" class="form-control" required="true" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Correo electrónico<sup>*</sup></label>
+                    <input type="email" name="email" id="email" class="form-control" required="true" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Empresa</label>
+                    <select class="form-control inputDate valid" id="company_id" name="company_id">
+                        <option value="null">Seleciona un empresa</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label">Enlace Front</label>
+                    <input type="text" name="url_front" id="url_front" class="form-control" aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Punto de Emisión</label>
+                    <input type="text" name="url_back" id="url_back" class="form-control" aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Rol<sup>*</sup></label>
+                    <select class="form-control inputDate valid" id="role" name="role" required="true">
+                        <option value="">Selecciona un Rol</option>
+                        <option value="1">Admin</option>
+                        <option value="2">Observador</option>
+                        <option value="3">Técnico</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="userActionBtn" type="button" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

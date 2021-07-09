@@ -1,0 +1,35 @@
+// Colores
+$main-color: #d4d729;
+$sec-color: #26759D;
+$thir-color: #143C50;
+$primary-color: #00857C;
+$secundary-color:#0C2340;
+$grisOscuro: #333;
+$grisClaro: #ccc;
+$grisMuyClaro: #f3f3f3;
+$textColor: #666;
+// Tipografías
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+$roboto: 'Roboto',
+sans-serif;
+$raleway: 'Raleway',
+sans-serif;
+@font-face {
+    font-family: 'Invention-Fina';
+    src: url('../fonts/invention/Invention_Lt.ttf');
+}
+
+@font-face {
+    font-family: 'Invention';
+    src: url('../fonts/invention/Invention_Rg.ttf');
+}
+
+@font-face {
+    font-family: 'Invention-Bold';
+    src: url('../fonts/invention/Invention_Rg.ttf');
+    font-weight: bolder;
+}
+
+body {
+    font-family: 'Invention', 'Invention-Bold' 'Arial';
+}

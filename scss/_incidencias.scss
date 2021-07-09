@@ -1,0 +1,25 @@
+#alertaIncidencias{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background-color: $main-color;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
+    display: none; 
+    span{
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 17px;
+        height: 17px;
+        line-height: 15px;
+        background-color: red;
+        border-radius: 50%;
+        font-size: .7rem;
+    }
+}

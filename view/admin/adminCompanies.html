@@ -1,0 +1,148 @@
+<script src="../../js/admin/adminCompany.js"></script>
+
+<div class="container">
+
+    <br>
+<h2>Empresas</h2>
+<br>
+    <div id="toolbarCompany">
+        <button id="createCompanyButton" class="btn btn-primary">
+            <i class="fa fa-user-plus"></i>
+        </button>
+        <button id="editCompany" class="btn" disabled>
+            <i class="fa fa-edit"></i>
+        </button>
+        <button id="deleteCompany" class="btn" disabled>
+            <i class="fa fa-trash"></i>
+        </button>
+    </div>
+
+    <table id="companyTable" data-toolbar="#toolbarCompany" data-search="true" data-response-handler="dataHandler"
+        data-show-refresh="false" data-show-toggle="false" data-show-columns="false" data-show-export="false"
+        data-detail-view="false" data-detail-formatter="false" data-minimum-count-columns="2"
+        data-show-pagination-switch="false" data-pagination="true" data-page-list="[ 50, 100, ALL]"
+        data-show-footer="false" class="adminTables">
+
+        <thead class="table-header">
+            <tr>
+                <th data-checkbox="true" data-align="center" data-valign="middle"></th>
+                <th class="textTag" data-field="name" data-align="left" data-visible="true" data-valign="middle"
+                    data-sortable="true">Nombre</th>
+                <!--<th class="textTag" data-field="email" data-align="left" data-visible="true" data-valign="middle"
+                    data-sortable="true">Email</th>-->
+            </tr>
+        </thead>
+    </table>
+
+</div>
+
+
+<div id="companyCreation" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document" style="max-width: 700px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Empresa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label">Nombre<sup>*</sup></label>
+                    <input type="text" name="name" id="name" class="form-control" required="true" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Abreviatura<sup>*</sup></label>
+                    <input type="text" name="abbreviation" id="abbreviation" class="form-control" required="true" aria-required="true">
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label class="control-label">Color primario<sup>*</sup></label>
+                            <input type="color" name="primary_color" id="primary_color" class="form-control" required="true" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label class="control-label">Color secundario<sup>*</sup></label>
+                            <input type="color" name="secondary_color" id="secondary_color" class="form-control" required="true" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label class="control-label">Color Terciario<sup>*</sup></label>
+                            <input type="color" name="terciary_color" id="terciary_color" class="form-control" required="true" aria-required="true">
+                        </div>
+                    </div>
+                    <!--
+                        POSTER inctivo
+                        image 
+                        Poster pasado
+                    -->
+                </div>
+              
+                <div class="form-group iconInput row">
+                    <div class="col-6">
+                        <label class="control-label">Logo<sup>*</sup></label>
+                        <input type="file" name="logo" id="logo" class="inputImage valid" value="" required="true"
+                            aria-required="true" aria-invalid="false">
+                    </div>
+                    <div class="col-6">
+                        <img class="image" src="../../assets/imgs/tranparent.png">
+                    </div>
+        
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Copyright<sup>*</sup></label>
+                    <textarea id="copyright" name="copyright" class="form-control" required="true" style="height: 75px;"></textarea>
+                </div>
+                <div class="form-group iconInput row">
+                    <div class="col-6">
+                        <label class="control-label">Poster vídeo</label>
+                        <input type="file" name="default_poster" id="default_poster" class="inputImage valid" value="" required=""
+                            aria-required="true" aria-invalid="false">
+                    </div>
+                    <div class="col-6">
+                        <img class="image imgPoster" src="../../assets/imgs/tranparent.png">
+                        <i class="fas fa-trash-alt removeImg hidden"></i>
+                    </div>
+        
+                </div>
+                <div class="form-group iconInput row">
+                    <div class="col-6">
+                        <label class="control-label">Poster directo inactivo</label>
+                        <input type="file" name="inactive_poster" id="inactive_poster" class="inputImage valid" value="" required=""
+                            aria-required="true" aria-invalid="false">
+                    </div>
+                    <div class="col-6">
+                        <img class="image imgPoster" src="../../assets/imgs/tranparent.png">
+                        <i class="fas fa-trash-alt removeImg hidden"></i>
+                    </div>
+        
+                </div>
+                <div class="form-group iconInput row">
+                    <div class="col-6">
+                        <label class="control-label">Poster directo pasado</label>
+                        <input type="file" name="passed_poster" id="passed_poster" class="inputImage valid" value="" required=""
+                            aria-required="true" aria-invalid="false">
+                    </div>
+                    <div class="col-6">
+                        <img class="image imgPoster" src="../../assets/imgs/tranparent.png">
+                        <i class="fas fa-trash-alt removeImg hidden"></i>
+                    </div>
+        
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Custom CSS</label>
+                    <textarea id="custom_css" name="custom_css" class="form-control" style="height: 150px;"></textarea>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button id="companyActionBtn" type="button" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

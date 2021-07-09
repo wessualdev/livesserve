@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Roboto");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #d4d729;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.box-form {
+  background-color: white;
+  padding: 20px;
+  /*border-radius: 25px;*/
+  width: 90%;
+  max-width: 350px;
+  border: 1px solid #f1f1f1;
+  -webkit-box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.75);
+  /*    @media (max-width: 500px) {
+            border: red 5px solid;
+        }*/
+}
+
+.box-form.register {
+  width: 90%;
+  max-width: 500px;
+}
+
+.loginLogo {
+  width: 80%;
+  display: block;
+  margin: 15px auto 30px auto;
+}
+
+.btn-grey {
+  background-color: #333;
+  border: 2px solid #333;
+  color: #FFF;
+  border-radius: 0;
+}
+
+.btn-grey:hover {
+  background-color: transparent;
+  color: #333;
+}
+
+form .form-group input[type="text"],
+form .form-group input[type="email"],
+form .form-group input[type="password"] {
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+  border-bottom: 2px solid #5d707e;
+  position: relative;
+  color: #333 !important;
+}
+
+form .form-group input[type="text"]:placeholder,
+form .form-group input[type="email"]:placeholder,
+form .form-group input[type="password"]:placeholder {
+  color: #333 !important;
+}
+
+form .form-group input[type="text"]:-ms-input-placeholder,
+form .form-group input[type="email"]:-ms-input-placeholder,
+form .form-group input[type="password"]:-ms-input-placeholder {
+  color: #333 !important;
+}
+
+form .form-group input[type="text"]::-webkit-input-placeholder,
+form .form-group input[type="email"]::-webkit-input-placeholder,
+form .form-group input[type="password"]::-webkit-input-placeholder {
+  color: #333 !important;
+}
+
+form .form-group input[type="text"]::-ms-input-placeholder,
+form .form-group input[type="email"]::-ms-input-placeholder,
+form .form-group input[type="password"]::-ms-input-placeholder {
+  color: #333 !important;
+}
+
+form .form-group input[type="text"]::placeholder,
+form .form-group input[type="email"]::placeholder,
+form .form-group input[type="password"]::placeholder {
+  color: #333 !important;
+}
+
+form .form-group input[type="text"]::-ms-input-placeholder,
+form .form-group input[type="email"]::-ms-input-placeholder,
+form .form-group input[type="password"]::-ms-input-placeholder {
+  color: #333 !important;
+}
+
+form .form-group input[type="text"]::disabled,
+form .form-group input[type="email"]::disabled,
+form .form-group input[type="password"]::disabled {
+  color: black !important;
+}
+
+form .form-group input[type="text"]:disabled,
+form .form-group input[type="email"]:disabled,
+form .form-group input[type="password"]:disabled {
+  color: black !important;
+}
+
+form .form-group .form-control:disabled {
+  color: #333 !important;
+}
+
+form #username:after {
+  content: '\f0e0';
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+form #password:before {
+  content: '\f023';
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+form p, form label {
+  font-size: .8em;
+}
+
+form a {
+  color: black;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.text-grey {
+  color: #333;
+}
+
+a {
+  color: #d4d729;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+a:hover {
+  color: #d4d729;
+  opacity: .8;
+}
+/*# sourceMappingURL=login.css.map */

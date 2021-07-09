@@ -1,0 +1,56 @@
+#adminChat {
+    #disclaimerQuestionChat {
+        display: none;
+        color: red;
+    }
+    .message-chat-content {
+        max-height: 50vh;
+        overflow-y: scroll;
+        padding: 1em;
+        padding: 1em;
+        .content-message {
+            list-style: none;
+            margin-top: 15px;
+            .nameUser {
+                font-weight: bolder;
+                color: #757575;
+            }
+            .message-info {
+                border: 1px solid #757575;
+                padding: 1em;
+                color: #757575;
+            }
+            &.dch {
+                margin-left: auto;
+                .nameUser {
+                    font-size: 1.7em;
+                    color: $primary-color;
+                    text-align: left;
+                }
+                .message-info {
+                    background-color: $primary-color;
+                    color: white;
+                }
+            }
+        }
+    }
+    .enter-message {
+        background-color: white;
+        padding: 1.5em;
+        textarea {
+            height: auto !important;
+            width: 100%;
+            border: none;
+        }
+        form {
+            .enter {
+                width: 50%;
+            }
+            text-align: right;
+        }
+        #alertEmpty {
+            color: red;
+            display: none;
+        }
+    }
+}

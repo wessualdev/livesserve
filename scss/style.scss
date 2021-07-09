@@ -1,0 +1,17 @@
+@import 'vars';
+@import 'mixin';
+@import 'general';
+@import 'header';
+@import 'forms';
+@import 'incidencias';
+@import 'media-queries';
+@import "tables";
+@import 'video_player';
+@import 'chat';
+body {
+    overflow-x: hidden;
+}
+
+#adminMainContainer {
+    padding-bottom: 30px;
+}

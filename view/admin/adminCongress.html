@@ -1,0 +1,81 @@
+<script src="../../js/admin/adminCongress.js"></script>
+
+<div class="container">
+
+    <br>
+    <h2>Congresos</h2>
+    <br>
+    <div id="toolbarCongress">
+        <button id="createCongressButton" class="btn btn-primary">
+            <i class="fa fa-user-plus"></i>
+        </button>
+        <button id="editCongresss" class="btn" disabled>
+            <i class="fa fa-edit"></i>
+        </button>
+        <button id="deleteCongress" class="btn" disabled>
+            <i class="fa fa-trash"></i>
+        </button>
+    </div>
+
+
+    <table id="congressTable" data-toolbar="#toolbarCongress" data-search="true" data-response-handler="dataHandler"
+        data-show-refresh="false" data-show-toggle="false" data-show-columns="false" data-show-export="false"
+        data-detail-view="false" data-detail-formatter="false" data-minimum-count-columns="2"
+        data-show-pagination-switch="false" data-pagination="true" data-page-list="[ 50, 100, ALL]"
+        data-show-footer="false" class="adminTables">
+
+        <thead class="table-header">
+            <tr>
+                <th data-checkbox="true" data-align="center" data-valign="middle"></th>
+                <th class="textTag" data-field="name" data-align="left" data-visible="true" data-valign="middle"
+                    data-sortable="true">Nombre</th>
+                    <th class="textTag" data-field="company.name" data-align="left" data-visible="true" data-valign="middle"
+                    data-sortable="true">Empresa</th>
+                <!--<th class="textTag" data-field="email" data-align="left" data-visible="true" data-valign="middle"
+                        data-sortable="true">Email</th>-->
+            </tr>
+        </thead>
+    </table>
+
+</div>
+
+<div id="congressCreation" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Congreso</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label">Nombre<sup>*</sup></label>
+                    <input type="text" name="name" id="name" class="form-control" required="true" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Empresa<sup>*</sup></label>
+                    <select class="form-control inputDate valid" id="company_id" name="company_id" required="true">
+                        <option value="">Seleciona un empresa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Fecha início<sup>*</sup></label>
+                    <input type="date" name="init_date" id="init_date" class="form-control inputDate valid" value="" required="true"
+                        aria-required="true" aria-invalid="false">
+        
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Fecha final<sup>*</sup></label>
+                    <input type="date" name="end_date" id="end_date" class="form-control inputDate valid" value="" required="true"
+                        aria-required="true" aria-invalid="false">
+        
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="congressActionBtn" type="button" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

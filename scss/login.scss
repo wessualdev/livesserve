@@ -1,0 +1,116 @@
+@import "vars";
+@import "mixin";
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: $main-color;
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.box-form {
+    @include bg-box;
+    width: 90%;
+    max-width: 350px;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.75);
+    &.register{
+        width: 90%;
+        max-width: 500px;
+    }
+    /*    @media (max-width: 500px) {
+            border: red 5px solid;
+        }*/
+}
+.loginLogo{
+    width: 80%;
+    display: block;
+    margin: 15px auto 30px auto;
+}
+.btn-grey {
+    background-color: $grisOscuro;
+    border: 2px solid $grisOscuro;
+    color: #FFF;
+    border-radius: 0;
+    &:hover {
+        background-color: transparent;
+        color: $grisOscuro;
+    }
+}
+
+form {
+    .form-group{
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            border: 0;
+            border-radius: 0;
+            background: transparent !important;
+            border-bottom: 2px solid #5d707e;
+            position: relative;
+            color: $grisOscuro !important;
+            &:placeholder{
+                color: $grisOscuro !important;
+            }
+            &:-ms-input-placeholder{
+                color: $grisOscuro !important;
+            }            
+            &::placeholder{
+                color: $grisOscuro !important;
+            }            
+            &::-ms-input-placeholder{
+                color: $grisOscuro !important;
+            }            
+            &::disabled{
+                color: black !important;
+            }             
+            &:disabled{
+                color: black !important;
+            }            
+        }
+        .form-control:disabled{
+            color: $grisOscuro !important;
+        }
+    }
+    #username:after {
+        content: '\f0e0';
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 30px;
+        height: 30px;
+    }
+    #password:before {
+        content: '\f023';
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    p,label{
+        font-size: .8em;
+    }
+    a{
+        color: black;
+        text-decoration: underline;
+        font-weight: bolder;
+    }
+}
+
+.text-grey {
+    color: $grisOscuro;
+}
+
+a{
+    color: $main-color;
+    text-decoration: none;
+    font-weight: bolder;
+    &:hover{
+        color: $main-color;
+        opacity: .8;
+    }
+}

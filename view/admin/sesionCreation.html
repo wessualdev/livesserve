@@ -1,0 +1,242 @@
+<script src="../../js/admin/sesionCreation.js"></script>
+<br>
+<div class="row col-12">
+    <div class="col-12 col-md-4">
+        <div class="form-group">
+            <label class="control-label">Título<sup>*</sup></label>
+            <input type="text" name="name" id="name" class="form-control" required="true" aria-required="true">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Soporte técnico<sup>*</sup></label>
+            <select class="form-control inputDate valid" id="support" name="support" required="true">
+                
+            </select>
+        </div>
+
+        <div class="form-group onlyEdit">
+            <label class="control-label">Enlace Directo</label>
+            <input type="text" name="live_url" id="live_url" class="form-control" aria-required="true" readonly>
+        </div>
+
+       
+
+        <div class="form-group iconInput">
+            <label class="control-label">Fecha<sup>*</sup></label>
+            <input type="date" name="date" id="date" class="form-control inputDate valid" value="" required="true"
+                aria-required="true" aria-invalid="false">
+
+        </div>
+        <div class="form-group iconInput row">
+            <div class="col-6">
+                <label class="control-label">Logo patrocinador alternativo(200 x 100px)</label>
+                <input type="file" name="logo_patro" id="logo_patro" class="inputImage valid" value=""
+                    aria-required="true" aria-invalid="false">
+            </div>
+            <div class="col-6">
+                <img src="../../assets/imgs/tranparent.png">
+                <i class="fas fa-trash-alt removeImg hidden"></i>
+            </div>
+
+        </div>
+
+        <div class="form-group iconInput row">
+            <div class="col-6">
+                <label class="control-label">Logo Empresa (200 x 100px)</label>
+                <input type="file" name="logo_company_alt" id="logo_company_alt" class="inputImage valid" value=""
+                    aria-required="true" aria-invalid="false">
+            </div>
+            <div class="col-6">
+                <img src="../../assets/imgs/tranparent.png">
+                <i class="fas fa-trash-alt removeImg hidden"></i>
+            </div>
+
+        </div>
+
+        <div class="form-group iconInput row" style="margin-top: 48px;">
+            <div class="col-6">
+                <label class="control-label">Poster directo pasado alternativo</label>
+                <input type="file" name="passed_poster_alt" id="passed_poster_alt" class="inputImage valid" value=""
+                    aria-required="true" aria-invalid="false">
+            </div>
+            <div class="col-6">
+                <img class="image imgPoster" src="../../assets/imgs/tranparent.png">
+                <i class="fas fa-trash-alt removeImg hidden"></i>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="control-label">Empresa<sup>*</sup></label>
+                    <select class="form-control inputDate valid" id="company_id" name="company_id" required="true">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="control-label">Tipo de emisión<sup>*</sup></label>
+                    <select class="form-control inputDate valid" id="type" name="type" required="true">
+                        <option value="">Selecciona un tipo de emisión</option>
+                        <option value="face">Presencial</option>
+                        <option value="facezoom">Presencial más Reunión</option>
+                        <option value="livezoom">Reunión Streaming</option>
+                        <option value="zoom">Reunión</option>
+                        <option value="zoomweb">Reunión WEB</option>
+                        <option value="podcast">Podcast</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Enlace Front</label>
+            <input type="text" name="url_front" id="url_front" class="form-control" aria-required="true" readonly>
+        </div>
+
+        <div class="form-group onlyEdit">
+            <label class="control-label">Enlace Chat</label>
+            <input type="text" name="url_chat" id="url_chat" class="form-control" aria-required="true" readonly>
+        </div>
+
+        <div class="row">
+            <!--
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="control-label" for="status">Estado</label>
+                    <select class="form-control" id="status" name="status">
+                        <!--En diferido sin chat y con la url de un mp4-->
+                        <!--<option value="0">Inactivo</option><!--video en bucle--><!--
+                        <option value="1">Activo</option>
+                        <option value="2">Pasado</option><!--video en bucle--><!--
+                    </select>
+                </div>
+            </div>
+        -->
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="control-label" for="chat">Activar mensajes</label>
+                    <select class="form-control" id="chat" name="chat">
+                        <option value="0">Inactivo</option>
+                        <option value="1">Chat</option>
+                        <option value="2">Solo preguntas</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+
+        
+
+        <div class="row">
+            <div class="col-6">
+
+                <div class="form-group iconInput">
+                    <label class="control-label">Hora Inicio<sup>*</sup></label>
+                    <input type="time" name="init_time" id="init_time" class="form-control inputTime valid" value="" required="true"
+                        aria-required="true" aria-invalid="false">
+        
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-group iconInput">
+                    <label class="control-label">Hora Final<sup>*</sup></label>
+                    <input type="time" name="end_time" id="end_time" class="form-control inputTime valid" value="" required="true"
+                        aria-required="true" aria-invalid="false">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Texto de alerta</label>
+           
+            <textarea id="warning" name="warning" class="form-control" style="height: 130px;"></textarea>
+        </div>
+
+        <div class="form-group iconInput row">
+            <div class="col-6">
+                <label class="control-label">Poster directo inactivo alternativo</label>
+                <input type="file" name="inactive_poster_alt" id="inactive_poster_alt" class="inputImage valid" value=""
+                    aria-required="true" aria-invalid="false">
+            </div>
+            <div class="col-6">
+                <img class="image imgPoster" src="../../assets/imgs/tranparent.png">
+                <i class="fas fa-trash-alt removeImg hidden"></i>
+            </div>
+
+        </div>
+       
+    </div>
+
+    <div class="col-12 col-md-4">
+        <!--PONERLO en cada cliente-->
+        <div class="form-group">
+            <label class="control-label">Estado<sup></sup></label>
+            <!--<input type="text" name="copyright" id="copyright" class="form-control" required="" aria-required="true">-->
+            <div class="live_status">
+                <button class="btn btn-secondary active red" data-value="1">
+                    Inactivo
+                </button>
+                <button class="btn btn-secondary green" data-value="2">
+                    Activo
+                </button>
+                <button class="btn btn-secondary blue" data-value="3">
+                    Pasado
+                </button>
+                <button class="btn btn-secondary yellow" data-value="4">
+                    Diferido
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Punto de Emisión</label>
+            <input type="text" name="url_back" id="url_back" class="form-control" aria-required="true" readonly>
+        </div>
+
+        <div class="form-group onlyEdit">
+            <label class="control-label">Enlace Reunión</label>
+            <input type="text" name="url_zoom" id="url_zoom" class="form-control" aria-required="true" readonly>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Encuesta URL</label>
+            <input type="text" name="survey" id="survey" class="form-control" aria-required="true">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Programa</label>
+            <!--TODO Include Tinymce-->
+            <textarea id="program" name="program" class="form-control" style="height: 218px;"></textarea>
+        </div>
+
+        <div class="form-group iconInput row">
+            <div class="col-6">
+                <label class="control-label">Vídeo poster</label>
+                <input type="file" name="video_poster" id="video_poster" class="inputVideo valid" value=""
+                    aria-required="true" aria-invalid="false">
+            </div>
+            <div class="col-6">
+                <video id="previewVideo" width="320" height="240" loop>
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+        
+    </div>
+    <br>
+    <div class="col-12 text-right">
+        <button id="cancel" class="btn btn-secondary">
+            Cancelar
+        </button>
+        <button id="save" class="btn btn-primary">
+            Crear
+        </button>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.fixed-table-toolbar{
+    display: flex;
+
+    .pull-left, .pull-right{
+        width: 50%;
+    }
+}
+
+.adminTables{
+    th{
+        background-color: $main-color;
+        color:white;
+        font-size: bold;
+    }
+}
+
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: auto;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Directo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="libs/jqueryplayer/jplayer.wss.css">
+    <link rel="stylesheet" href="libs/jqueryplayer/plyr.css">
+
+</head>
+<style>
+    /*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+</style>
+
+<body>
+
+
+    <div class="page-content p-5" id="content">
+        <button id="" type="button" class="btn rounded-pill shadow-sm px-4 sidebarCollapse toggle-arrow">
+            <i class="fas fas-bars mr-2"></i>
+            <small class="text-uppercase font-weight-bold">Toggle</small>
+        </button>
+        <div class="row">
+            <div class="col-md-3 col-3"><img src="" alt="" srcset="" id='imgLogo' class="img-fluid"></div>
+            <div class="col-md-6 text-center col-6">
+                <p class='tituloPonencia'></p>
+            </div>
+            <div class="col-md-3 col-3"><img src="" alt="" srcset="" id='imgPatron' class="img-fluid"></div>
+        </div>
+        <div id="capaFrontal">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div id="columnaVideo" class="col-12">
+                        <i id="closeVideo" class="fas fa-times-circle" data-toggle="tooltip" data-placement="top"
+                            title="Cerrar recurso"></i>
+                        <div id="contenedorVideosGeneral">
+                            <!--Cargo por JS-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="vertical-nav " id="sidebar">
+        <div class="py-4 px-3 mb-4 ">
+            <div>
+                <button id="" type="button" class="btn   shadow-sm sidebarCollapse toggle-arrow">
+
+                </button>
+
+                <a href="" target="_blank" id='survei' class="btn btn-danger" style="float:right;">Encuesta</a>
+            </div>
+        </div>
+        <div class=" mb-4 d-none toggleSidebar">
+            <div class="my-3">
+                <a id="programaBoton" class=" sidebarCollapse toggleSidebar d-none my-5">
+                    <img src="./assets/SVG/program_img.svg" class="img-fluid" alt="" srcset="" width="50PX">
+                </a>
+            </div>
+            <div class="my-3">
+                <a id="chatBoton" class=" sidebarCollapse toggleSidebar d-none my-5">
+                    <img src="./assets/SVG/chat_img.svg" class="img-fluid" alt="" srcset="" width="50PX">
+                </a>
+            </div>
+            <div class="my-3">
+                <a id="mediaBoton" class=" sidebarCollapse toggleSidebar d-none my-5">
+                    <img src="./assets/SVG/social_media_img.svg" class="img-fluid" alt="" srcset="" width="50PX">
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <div class="accordion" id="directAccordion">
+                <div class="accordion-item my-3">
+                    <h2 class="accordion-header" id="headProgram">
+                        <a class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseProgram" aria-expanded="true" aria-controls="collapseProgram">
+                            <img src="./assets/SVG/program_img.svg" class="img-fluid" alt="" srcset="" width="50PX">
+                            Programa
+                        </a>
+                    </h2>
+                    <div id="collapseProgram" class="accordion-collapse collapse " aria-labelledby="headProgram"
+                        data-bs-parent="#directAccordion">
+                        <div class="accordion-body">
+                            <div class="row" id='programa'>
+                                <div class="col-6">
+                                    <p>Miercoles</p>
+                                    <p id="date"></p>
+                                </div>
+                                <div class="col-6">
+                                    <p>Hora
+                                        <br>
+                                        <span id="initTime">
+
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <p class='tituloPonencia'></p>
+                                </div>
+                                <div id="idDoctor">
+                                    <p class="nombreDoctor">
+                                        Dra. Aranzazu Sancho
+                                    </p>
+                                    <p class="funcionDoctor">
+                                        responsable de las consultas de individualizaci n de tratamiento. Hospital
+                                        Universitario Puerta del Hierro de Madrid.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item my-3" id="accordionQuestionChat">
+                    <h2 class="accordion-header" id="headQuestionChat">
+                        <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseQuestionChat" aria-expanded="false"
+                            aria-controls="collapseQuestionChat">
+                            <img src="./assets/SVG/chat_img.svg" class="img-fluid" alt="" srcset="" width="50PX">CHAT
+                        </a>
+                    </h2>
+                    <div id="collapseQuestionChat" class="accordion-collapse collapse show"
+                        aria-labelledby="headQuestionChat" data-bs-parent="#directAccordion">
+                        <div class="accordion-body">
+                            <div id='chat'>
+                                <p id="disclaimerQuestionChat">En este chat solo se puede ver el cuestionario.</p>
+                                <div id="questionChatList">
+                                    <ul class="message-chat-content"></ul>
+                                </div>
+                                <div class="enter-message row">
+                                    <form class="col-9" action="" method="post">
+                                        <!-- <input type="hidden" id="forUser" name="para" value="0" /> -->
+                                        <!-- <input type="hidden" name="id_usuario" value="<?php echo $_SESSION['username'] ?>" />
+                                            <input type="hidden" name="codigo" value="<?php echo $_SESSION['grupo'] ?>" /> -->
+                                        <div class="col-9">
+                                            <textarea rows="2" cols="10" placeholder="Escribe aquí un mensaje"
+                                                id="message-question" class=""></textarea>
+                                        </div>
+                                        <div id="alertEmpty">Escribe cenutrio</div>
+                                    </form>
+
+                                    <div class="col-3">
+                                        <input type="image" name="submit" class="enter" id='send-question'
+                                            src="./assets/SVG/enter-arrow.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item my-3">
+                    <h2 class="accordion-header" id="headSocialMedia">
+                        <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSocialMedia" aria-expanded="false"
+                            aria-controls="collapseSocialMedia">
+                            <img src="./assets/SVG/social_media_img.svg" class="img-fluid" alt="" srcset=""
+                                width="50PX">Social Media
+                        </a>
+                    </h2>
+                    <div id="collapseSocialMedia" class="accordion-collapse collapse" aria-labelledby="headSocialMedia"
+                        data-bs-parent="#directAccordion">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well
+                            as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+                            overriding our default variables. It's also worth noting that just about any HTML can go
+                            within the <code>.accordion-body</code>,
+                            though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="./libs/bootstrap/js/bootstrap.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/jqueryplayer/jquery.jplayer.min.js"></script>
+    <script src="js/video_player/videos.js"></script>
+    <script src="js/video_player/video_player.js"></script>
+    <script src="libs/jqueryplayer/plyr.min.js"></script>
+    <script src="libs/jqueryplayer/hls.min.js"></script>
+
+
+    <script>
+        function activaDirectoAWS() {
+
+            $("#contenedorVideosGeneral").html("<video controls playsinline poster='./img/img_video.jpg' style='width: 100%;'></video>").promise().done(function () {
+
+                //document.addEventListener('DOMContentLoaded', () => {
+                const source = 'https://d3ed7ab5g77y04.cloudfront.net/out/v1/cda9dd046cd941a5a24db2d8b970b582/index.m3u8';
+                const video = document.querySelector('video');
+
+                // For more options see: https://github.com/sampotts/plyr/#options
+                // captions.update is required for captions to work with hls.js
+                const player = new Plyr(video, { captions: { active: true, update: true, language: 'en' } });
+
+                if (!Hls.isSupported()) {
+                    video.src = source;
+                } else {
+                    // For more Hls.js options, see https://github.com/dailymotion/hls.js
+
+                    const hls = new Hls();
+                    hls.loadSource(source);
+                    hls.attachMedia(video);
+
+                    hls.debug = true;
+
+                    window.hls = hls;
+
+                    // Handle changing captions
+                    player.on('languagechange', () => {
+                        // Caption support is still flaky. See: https://github.com/sampotts/plyr/issues/994
+                        setTimeout(() => hls.subtitleTrack = player.currentTrack, 50);
+                    });
+                }
+
+                // Expose player so it can be used from the console
+                window.player = player;
+
+                window.player.debug = true;
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>

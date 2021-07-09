@@ -1,0 +1,47 @@
+.tooltip > .tooltip-inner {
+    font-size: .8em;
+}
+a{    
+    transition: .3s all;
+}
+main{
+    padding-left: 80px;
+}
+
+.mensajes{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 60px;
+    right: 0;
+    margin: 0 auto;
+}
+
+.view{
+    color: $sec-color;
+    margin: 0 2px;
+}
+.delete{
+    color: red;
+    margin: 0 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.btn{
+    border-radius: 0 !important;
+}
+
+.btn-primary{
+    background-color: $main-color !important;
+    border-color: $main-color;
+    &:hover{
+        background-color: transparent !important;
+        border-color: $main-color;
+        color: $main-color;
+    }
+}
